@@ -1,0 +1,163 @@
+/* Component Styles */
+
+/* Header/Sidebar */
+header {
+  background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  box-shadow: var(--shadow-md);
+  z-index: 100;
+}
+
+header h1 {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Navigation Links */
+header nav a {
+  transition: color var(--transition-fast);
+}
+
+header nav a:hover {
+  color: #60a5fa !important;
+}
+
+/* Section Animations */
+section {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+#about img {
+  border: 4px solid #e5e7eb;
+  transition: border-color var(--transition-fast);
+}
+
+#about img:hover {
+  border-color: var(--primary-color);
+}
+
+/* Skills Section */
+#skills p {
+  padding: 12px 24px;
+  margin: 8px auto;
+  border-radius: 8px;
+  max-width: 800px;
+  background: white;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Experience Cards */
+#experience .mb-10 {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+/* Experience Timeline */
+#experience .border-l-4 {
+  position: relative;
+}
+
+#experience .border-l-4::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+/* Education Section */
+#education {
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+}
+
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+}
+
+#contact p {
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  margin: 8px auto;
+}
+
+#contact a:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Mobile Menu */
+#menu-toggle {
+  transition: color var(--transition-fast);
+  cursor: pointer;
+}
+
+#menu-toggle:hover {
+  color: var(--accent-color);
+}
+
+#mobile-menu {
+  transition: all var(--transition-fast);
+}
+
+#mobile-menu a {
+  padding: 12px;
+  border-radius: 8px;
+  display: block;
+  transition: background var(--transition-fast);
+}
+
+#mobile-menu a:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+/* Section Headings */
+section h2 {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  border-radius: 2px;
+}
+
+/* Technology Tags */
+.italic.text-gray-600 {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  padding: 8px 16px;
+  border-radius: 6px;
+  display: inline-block;
+  margin: 8px 0;
+  border-left: 3px solid var(--primary-color);
+}
