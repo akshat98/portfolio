@@ -4,7 +4,7 @@ export const personalInfo = {
   location: "Tokyo, Japan",
   visa: "Japan Work Visa valid until 25-08-2027",
   introduction: "I am a Full Stack Software Engineer with experience in developing web applications using Java, Angular, and AWS. Currently based in Tokyo, Japan, Currently, working at Rakuten Group in the payments gateway department as Senior Software Engineer (Design Lead).",
-  profileImage: "/assets/images/profile.png"
+  profileImage: process.env.PUBLIC_URL + "/assets/images/profile.png"
 };
 
 export const skills = {
@@ -33,7 +33,7 @@ export const experience = [
     role: "Senior Software Engineer (Design Lead)",
     linkedinUrl: "https://www.linkedin.com/company/rakuten",
     websiteUrl: "https://global.rakuten.com/corp/",
-    logo: "/assets/images/companies/rakuten-logo.png",
+    logo: process.env.PUBLIC_URL + "/assets/images/companies/rakuten-logo.png",
     projects: [
       {
         title: "Payment Gateway System",
@@ -55,7 +55,7 @@ export const experience = [
     role: "Full Stack Software Engineer (A2 Level)",
     linkedinUrl: "https://jp.linkedin.com/company/takemek",
     websiteUrl: "https://www.takeme.com/",
-    logo: "/assets/images/companies/takeme-logo.png",
+    logo: process.env.PUBLIC_URL + "/assets/images/companies/takeme-logo.png",
     projects: [
       {
         title: "Restaurant Booking System: TakeMe Concierge",
@@ -83,7 +83,7 @@ export const experience = [
     role: "Senior Software Engineer",
     linkedinUrl: "https://in.linkedin.com/company/delhivery",
     websiteUrl: "https://www.delhivery.com/",
-    logo: "/assets/images/companies/delhivery-logo.png",
+    logo: process.env.PUBLIC_URL + "/assets/images/companies/delhivery-logo.png",
     roles: [
       {
         title: "Senior Software Engineer",

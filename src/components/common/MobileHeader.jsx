@@ -18,7 +18,7 @@ const MobileHeader = () => {
 
   const handleDownloadJP = () => {
     const link = document.createElement('a');
-    link.href = '/Akshat_resume_jp.docx';
+    link.href = process.env.PUBLIC_URL + '/Akshat_resume_jp.docx';
     link.download = 'Akshat_resume_jp.docx';
     document.body.appendChild(link);
     link.click();
