@@ -16,6 +16,15 @@ const MobileHeader = () => {
     setIsMenuOpen(false);
   };
 
+  const handleDownloadJP = () => {
+    const link = document.createElement('a');
+    link.href = '/Akshat_resume_jp.docx';
+    link.download = 'Akshat_resume_jp.docx';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       {/* Floating Burger Button - Bottom Right */}
@@ -67,6 +76,13 @@ const MobileHeader = () => {
               </li>
             ))}
           </ul>
+          
+          <button
+            onClick={handleDownloadJP}
+            className="w-full mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-semibold"
+          >
+            日本語版をダウンロード Download JP
+          </button>
         </div>
       </div>
     </>
