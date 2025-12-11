@@ -402,7 +402,6 @@ FodyWeavers.xsd
 /.pnp
 .pnp.js
 /coverage
-/build
 .env.local
 .env.development.local
 .env.test.local
