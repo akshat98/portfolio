@@ -10,7 +10,7 @@ const About = () => {
           <img
             src={personalInfo.profileImage}
             alt="Profile"
-            className="w-40 h-40 rounded-full shadow-md"
+            className="w-40 h-40 rounded-full shadow-md object-cover"
           />
         </div>
 
