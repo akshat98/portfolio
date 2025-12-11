@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Akshat Joshi's Portfolio</title>
-  
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body class="flex flex-col md:flex-row  bg-gray-100 font-sans leading-normal tracking-normal">
 <!-- Header Section -->
@@ -72,32 +75,59 @@
 
   <!-- Skills Section -->
   <section id="skills" class="py-16 text-center bg-gray-100">
-    <h2 class="text-3xl font-bold mb-8">🛠️ Skills</h2>
-  
+    <h2 class="text-3xl font-bold mb-8">🛠️ Technical Skills</h2>
+
     <!-- Languages -->
-    <p class="text-lg"><strong>Languages:</strong> C++, TypeScript, Java, Python</p>
-  
+    <p class="text-lg"><strong>Languages:</strong> Java, TypeScript, Python, C++</p>
+
+    <!-- Databases -->
+    <p class="text-lg"><strong>Databases:</strong> DynamoDB, Redis, MySQL, PostgreSQL</p>
+
+    <!-- DevOps -->
+    <p class="text-lg"><strong>DevOps:</strong> Github Actions, Jenkins</p>
+
     <!-- Frameworks -->
-    <p class="text-lg"><strong>Frameworks:</strong> Angular, React, SpringBoot, Django</p>
-  
-    <!-- Cloud & DevOps -->
-    <p class="text-lg">
-      <strong>Cloud & DevOps:</strong> AWS (Lambda, ECS, S3, Route53, CloudFront), CI/CD (Git Actions)
-    </p>
-  
-    <!-- System Design Concepts -->
-    <p class="text-lg">
-      <strong>System Design Concepts:</strong> Distributed Systems, Fault Tolerance, Performance Optimization
-    </p>
+    <p class="text-lg"><strong>Frameworks:</strong> SpringBoot, Django, Angular, React</p>
+
+    <!-- Testing -->
+    <p class="text-lg"><strong>Testing:</strong> PyTest, JMeter, Cypress, BrowserStack</p>
+
+    <!-- Cloud -->
+    <p class="text-lg"><strong>Cloud:</strong> AWS</p>
   </section>
   
   <section id="experience" class="bg-white py-16 px-4 sm:px-16">
     <h2 class="text-3xl font-bold sm:text-center mb-12">Experience & Projects</h2>
-  
+
+    <!-- Rakuten Group Experience -->
+    <div class="mb-10">
+      <h3 class="text-2xl font-semibold">Rakuten Group, Tokyo, Japan</h3>
+      <p class="text-gray-600">May 2025 - Present</p>
+
+      <div class="border-l-4 border-blue-500 pl-6 mt-4 space-y-8">
+        <div>
+          <h4 class="text-xl font-semibold">Senior Software Engineer (Design Lead)</h4>
+
+          <div class="mt-4">
+            <h5 class="text-lg font-semibold text-blue-600 mt-4">
+              Payment Gateway System
+            </h5>
+            <p class="italic text-gray-600">Technologies: AWS, Spring, Python, Aurora MySQL, Jenkins</p>
+            <ul class="list-inside space-y-2 mt-2">
+              <li>Designed and implemented <b>auto-cancel batch functionality</b> from scratch for <b>Rakuten Card's Barcode/QR payments</b>.</li>
+              <li>Upgraded <b>cipher suite from AES/CBC to AES/GCM</b> and rotated AES keys per <b>NIST guidelines</b>.</li>
+              <li>Built a <b>POC for QA AI tool</b> to auto-generate test cases from Excel specs into Karate feature files (built with Rakuten's LLM).</li>
+              <li>Serving as <b>Scrum Master</b> for a <b>3-member Payment Core team</b>, managing Sprint board, Jira creations, backlogs and Team Velocity.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- TakeMe Tokyo Experience -->
     <div class="mb-10">
       <h3 class="text-2xl font-semibold">TakeMe <span class="text-lg">(株式会社)</span>, Tokyo, Japan</h3>
-      <p class="text-gray-600">Aug 2022 - Present</p>
+      <p class="text-gray-600">Aug 2022 - May 2025</p>
   
       <div class="border-l-4 border-blue-500 pl-6 mt-4 space-y-8">
         <div>
@@ -106,32 +136,20 @@
           <div class="mt-4">
             <h5 class="text-lg font-semibold text-blue-600 mt-4">
               Restaurant Booking System: TakeMe Concierge
-            </h5>            
-            <p class="italic text-gray-600">Technologies: TypeScript, Java, Angular 16, SpringBoot, AWS</p>
+            </h5>
+            <p class="italic text-gray-600">Technologies: AWS, Angular 16, Tailwind, SpringBoot, Thymeleaf</p>
             <ul class="list-inside space-y-2 mt-2">
-              <li>Built a <b>highly available frontend system</b> from scratch, ensuring <b>cross-browser compatibility</b> with support for iOS 13+, Android 10+, and BrowserStack testing.</li>
-              <li>Developed an <b>A/B testing framework</b> to evaluate the <b>shop recommendation system</b>, integrating <b>machine learning models</b> and optimizing recommendations based on real-time performance metrics.</li>
-              <li>Developed an end-to-end <b>invoice generation system</b>, ensuring compliance by securely storing invoices for <b>10 years</b> in <b>AWS S3</b>.</li>
-              <li>Managed AWS infrastructure with <b>99.99%</b> uptime and zero-downtime deployments.</li>
-              <li>Enhanced page load time by <b>100%</b> using multi-resolution image generation.</li>
+              <li>Built the frontend for a <b>B2C booking system</b> from scratch with <b>cross-browser compatibility</b> for <b>iOS 11+</b> and <b>Android 8+</b>. MVP/POC: <b>In 3 months</b>, Production release: <b>5 months</b>. GMV after 12 months: <b>12 Million Yen/month</b>.</li>
+              <li>Developed an end-to-end <b>invoice system</b> storing <b>10-year compliant files</b> in <b>AWS S3</b>.</li>
+              <li>Optimized image loading via <b>AWS Lambda (Python)</b> multiple resolutions, improving performance.</li>
             </ul>
           </div>
   
           <div class="mt-4">
-            <h5 class="text-lg font-semibold text-blue-600 mt-4">Docomo (dbarai) Pay Integration</h5>
-            <p class="italic text-gray-600">Technologies: TypeScript, Java, SpringBoot, React</p>
+            <h5 class="text-lg font-semibold text-blue-600 mt-4">Docomo (d払い) Pay Integration: TakeMe Pay</h5>
+            <p class="italic text-gray-600">Technologies: AWS, React, SpringBoot</p>
             <ul class="list-inside space-y-2 mt-2">
-              <li>Integrated <b>Docomo Pay APIs</b>, contributing <b>5.2%</b> of platform revenue.</li>
-              <li>Reviewed and interpreted <b>Japanese documentation</b> for API integration.</li>
-            </ul>
-          </div>
-  
-          <div class="mt-4">
-            <h5 class="text-lg font-semibold text-blue-600 mt-4">Merchant Admin Site: TakeMe Admin</h5>
-            <p class="italic text-gray-600">Technologies: Angular, Responsive Design</p>
-            <ul class="list-inside space-y-2 mt-2">
-              <li>Revamped the admin panel's UI/UX, ensuring responsive design across devices.</li>
-              <li>Migrated QR payment generation from AngularJS to Angular 16.</li>
+              <li>Integrated <b>Docomo Pay APIs</b> into gateway, contributing to <b>5.2%</b> of platform revenue. Interpreted <b>Japanese Docomo API documentation</b>.</li>
             </ul>
           </div>
         </div>
@@ -142,31 +160,27 @@
     <div class="mb-10">
       <h3 class="text-2xl font-semibold">Delhivery Ltd., India</h3>
       <p class="text-gray-600">Jun 2020 - Aug 2022</p>
-  
+
       <div class="border-l-4 border-blue-500 pl-6 mt-4 space-y-8">
         <div>
-          <h4 class="text-xl font-semibold">Senior Software Engineer (Apr 2022 - Aug 2022)</h4>
+          <h4 class="text-xl font-semibold">Senior Software Engineer</h4>
+
           <div class="mt-4">
-            <h5 class="text-lg font-semibold text-blue-600 mt-4">Last Mile Delivery Service: RETURNS Microservice</h5>
-            <p class="italic text-gray-600">Technologies: Python, Django 2.2, Angular 4, PostgreSQL, AWS</p>
+            <h5 class="text-lg font-semibold text-blue-600 mt-4">Last Mile Delivery: RETURNS Microservice</h5>
+            <p class="italic text-gray-600">Technologies: Django, Angular, Postgres, AWS</p>
             <ul class="list-inside space-y-2 mt-2">
-              <li>Led a team of <b>2 engineers</b>, prepared flow diagrams, delivered knowledge transfer sessions, and coordinated with product managers for feature enhancements.</li>
-              <li>Scaled a warehouse dispatch microservice to handle <b>4x higher data loads</b> using <b>event-driven architecture</b>.</li>
-              <li>Optimized SQL queries, boosting API performance by <b>70%</b>.</li>
-              <li>Developed an <b>OTP-verified delivery system</b> supporting electronic proof of delivery documents.</li>
+              <li>Served as <b>SinglePointOfContact (SPOC)</b> for the microservice, created <b>UML and AWS architecture diagrams</b>, and conducted <b>KT sessions</b>.</li>
+              <li>Scaled service to handle <b>4x data load</b> by improving warehouse dispatch and package scan APIs performance by <b>70%</b> using <b>optimized SQL queries</b>, <b>parallel processing</b> and reducing redundant meta data in Database by <b>30%</b>.</li>
+              <li>Developed an <b>OTP-verified delivery system</b> supporting electronic proof of delivery documents for audit.</li>
             </ul>
           </div>
-        </div>
-  
-        <div>
-          <h4 class="text-xl font-semibold">Software Engineer (Jun 2020 - Mar 2022)</h4>
+
           <div class="mt-4">
             <h5 class="text-lg font-semibold text-blue-600 mt-4">Virtual Number Calling System: CALL MASKING</h5>
-            <p class="italic text-gray-600">Technologies: Python, Django, Redis, AWS</p>
+            <p class="italic text-gray-600">Technologies: Python/Django, Redis, AWS</p>
             <ul class="list-inside space-y-2 mt-2">
-              <li>Implemented a <b>fault-tolerant system</b> for secure, private calls using virtual numbers, ensuring <b>data privacy</b> and compliance.</li>
-              <li>Increased <b>fault tolerance</b> using a <b>fallback mechanism</b> to handle calling errors by switching to another third-party carrier, leveraging <b>Redis caching</b> and <b>pipelines</b>, resulting in an <b>85% improvement in connection rate</b>.</li>
-              <li>Designed a <b>PIN-based number management system</b> that dynamically allocates virtual numbers, reducing call failures.</li>
+              <li>Developed a <b>fault-tolerant system</b> for secure, private calls using virtual numbers.</li>
+              <li>Implemented <b>fallback logic</b> using <b>Redis pipelines</b>, boosting call connection rate by <b>85%</b>.</li>
             </ul>
           </div>
         </div>
@@ -192,19 +206,12 @@
   <!-- Certifications & Publications Section -->
   <section id="certifications" class="p-8 bg-white">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Certifications & Publications</h2>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Certifications And Publications</h2>
       <div class="space-y-4">
         <div>
-          <h3 class="text-xl font-semibold text-gray-800">GeeksforGeeks Articles</h3>
-          <p class="text-gray-600">Published articles under the profile name "cr7-bullet"</p>
-          <p class="text-gray-500">Link: <a href="https://auth.geeksforgeeks.org/user/cr7_bullet/articles?utm_source=geeksforgeeks&utm_medium=article_author&utm_campaign=auth_user#" target="_blank" class="text-blue-400">GeeksforGeeks Profile</a></p>
-        </div>
-        <!-- Add more certifications or publications here if needed -->
-        <div class="space-y-4">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-800">Total Certifications: 5</h3>
-            <p class="text-gray-600">For a complete list of certifications, visit my <a href="https://www.linkedin.com/in/akshat-joshi-075093127/details/certifications/" target="_blank" class="text-blue-400">LinkedIn Certifications</a> page. *Open only if LinkedIn Account logged in browser</p>
-          </div>
+          <h3 class="text-xl font-semibold text-gray-800">Competitive Programming (C++)</h3>
+          <p class="text-gray-600">GeeksforGeeks <b>4 Articles</b>, <b>2 Collaborations</b></p>
+          <p class="text-gray-500">Profile: <a href="https://auth.geeksforgeeks.org/user/cr7_bullet/articles?utm_source=geeksforgeeks&utm_medium=article_author&utm_campaign=auth_user#" target="_blank" class="text-blue-400">cr7-bullet</a></p>
         </div>
       </div>
     </div>
