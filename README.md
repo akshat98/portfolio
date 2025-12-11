@@ -1,53 +1,83 @@
-# Akshat Joshi's Portfolio
+# Akshat Joshi - Full Stack Software Engineer Portfolio
 
-A modern, responsive portfolio website showcasing professional experience, technical skills, and projects. Built with clean HTML, Tailwind CSS, and custom CSS animations.
+A modern, responsive portfolio website built with React and Tailwind CSS showcasing professional experience, skills, and projects.
 
 ## Features
 
-- **Responsive Design**: Fully responsive layout that works seamlessly across desktop, tablet, and mobile devices
-- **Modern UI/UX**: Clean and professional interface with smooth animations and hover effects
-- **Interactive Elements**: Engaging user experience with transitions, hover states, and visual feedback
-- **Cross-Browser Compatible**: Tested on iOS 11+, Android 8+, and modern browsers
-- **Performance Optimized**: Lightweight with fast loading times
-- **Easy to Customize**: Well-structured code for easy updates and modifications
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Language Support**: English and Japanese versions available
+- **Download Resume**: Direct download of Japanese resume (DOCX)
+- **Smooth Navigation**: Seamless scrolling between portfolio sections
+- **Modern UI**: Dark theme with professional styling
 
 ## Tech Stack
 
-### Frontend
-- **HTML5**: Semantic markup for better accessibility and SEO
-- **Tailwind CSS**: Utility-first CSS framework via CDN
-- **Custom CSS**: Enhanced styling with animations and effects
-- **Vanilla JavaScript**: Mobile menu toggle functionality
+- **Frontend**: React, Tailwind CSS
+- **Build Tool**: Create React App (react-scripts 5.0.1)
+- **Styling**: Tailwind CSS utility-first framework
+- **Deployment**: Static hosting ready
 
-### Design Features
-- Smooth scrolling navigation
-- Gradient backgrounds and text effects
-- Animated hover states
-- Custom scrollbar styling
-- Fade-in animations
-- Interactive cards and sections
-- Mobile-friendly hamburger menu
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14+)
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development Server
+
+```bash
+npm start
+```
+
+Opens [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Production Build
+
+```bash
+npm run build
+```
 
 ## Project Structure
 
 ```
-portfolio/
-├── index.html          # Main HTML file with portfolio content
-├── style.css           # Custom CSS with animations and enhancements
-├── script.js           # JavaScript for mobile menu functionality
-├── assets/
-│   └── images/
-│       └── profile.png # Profile picture
-└── README.md           # Project documentation
+src/
+├── components/
+│   ├── common/        # Header, Navigation, MobileHeader
+│   └── sections/      # About, Experience, Skills, Education, Certifications, etc.
+├── data/
+│   └── portfolioData.js    # Portfolio content and metadata
+├── styles/            # CSS files
+└── App.jsx            # Main component
+
+public/
+├── index.html         # SVG favicon (AJ initials)
+└── Akshat_resume_jp.docx  # Japanese resume
 ```
 
-## Sections
+## Key Features
 
-1. **About**: Introduction with profile picture and professional summary
-2. **Technical Skills**: Comprehensive list of programming languages, frameworks, databases, and tools
-3. **Experience & Projects**: Detailed work history with key achievements
-   - Rakuten Group (May 2025 - Present)
-   - TakeMe k.k. (Aug 2022 - May 2025)
+### Download Button
+Both headers include "日本語版をダウンロード Download JP" button to download the Japanese resume.
+
+### Portfolio Sections
+- **About**: Professional summary and background
+- **Experience**: Detailed work history with achievements
+- **Skills**: Technical stack (languages, frameworks, databases, cloud tools)
+- **Certifications**: LinkedIn certifications and publications
+- **Education**: B.Tech in Computer Science and Engineering
+- **Contact**: Email, LinkedIn, GitHub
+
+## Browser Support
+
+All modern browsers (Chrome, Firefox, Safari, Edge) with responsive mobile support.
+
    - Delhivery Ltd. (Jun 2020 - Aug 2022)
 4. **Education**: Academic background
 5. **Certifications & Publications**: GeeksforGeeks articles and contributions
