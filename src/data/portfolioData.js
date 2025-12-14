@@ -8,20 +8,20 @@ export const personalInfo = {
 };
 
 export const skills = {
-  languages: ["Java", "TypeScript", "Python", "C++"],
-  frameworks: ["SpringBoot", "React", "Angular", "Django"],
+  languages: ["Java", "TypeScript", "Python", "C++", "GO"],
+  frameworks: ["SpringBoot", "Django", "Angular", "React"],
   databases: {
     nosql: ["DynamoDB", "Redis"],
     rdbms: ["MySQL", "PostgreSQL"]
   },
   cloudDevOps: {
-    cloud: "AWS (Lambda, ECS, S3, Route53, CloudFront)",
-    cicd: "Git Actions"
+    cloud: "AWS",
+    cicd: "Github Actions, Jenkins"
   },
-  testing: ["PyTest", "JMeter", "Cypress", "BrowserStack"],
-  monitoring: ["AWS CloudWatch", "Datadog"],
-  AI: ["Google ADK (agent development kit)"]
-  ,
+  messagingQueue: ["Kafka", "SQS", "DynamoStreams"],
+  testing: ["PyTest", "JMeter", "Cypress", "Celery"],
+  monitoring: ["Datadog"],
+  AI: ["GoogleADK"],
   systemDesign: ["Scalability", "Microservices", "Event-driven Architecture", "API Design"]
 };
 
@@ -37,13 +37,12 @@ export const experience = [
     projects: [
       {
         title: "Payment Gateway System",
-        technologies: ["AWS", "Java/Spring", "Python", "Aurora MySQL"],
+        technologies: ["RAG Agent", "AWS", "Spring", "Python", "Aurora MySQL", "Jenkins"],
         achievements: [
-          "Functioned as Scrum Master for a 3-member Payment Gateway Core team, responsible for facilitating agile, tracking team velocity, and managing stakeholder communications.",
-          "Designed and implemented auto-cancel batch functionality for Rakuten Card's Barcode and QR payments.",
-          "Responsible for developing design and release roadmap documentation for new features, and updating architecture diagrams and technical documents to incorporate recent, previously undocumented codebase changes.",
-          "Upgraded cipher suite from AES/CBC to AES/GCM and rotated AES keys per NIST guidelines.",
-          "Built a POC for QA AI tool to auto-generate test cases from Excel specs into Karate feature files (built with Rakuten's LLM)."
+          "Built RAG agent for QAs that converts Test specs documents into automated test payloads using Rakuten LLM + Google ADK",
+          "Designed and implemented auto-cancel batch functionality from scratch for Rakuten Card's Barcode and QR payment methods.",
+          "Upgraded cipher suite from AES/CBC to AES/GCM and rotated AES keys per NIST guidelines and PCI DSS compliance.",
+          "Improved CI/CD Pipeline, by upgrading OWASP Dependency check to 12.x.x and by resolving critical vulnerabilities from Dependency Check and PMD, and worked with security team for the codebase vulnerability mitigation guidelines"
         ]
       }
     ]
@@ -58,20 +57,19 @@ export const experience = [
     logo: process.env.PUBLIC_URL + "/assets/images/companies/takeme-logo.png",
     projects: [
       {
-        title: "Restaurant Booking System: TakeMe Concierge",
-        technologies: ["Java/SpringBoot", "Python", "TypeScript/Angular 16", "Tailwind", "AWS"],
+        title: "Docomo (d払い) Pay Integration: TakeMe Pay",
+        technologies: ["AWS", "React", "SpringBoot", "GO"],
         achievements: [
-          "Lead engineer for a B2C Booking System developed from scratch using Angular 16 and Tailwind, ensuring cross-browser compatibility with support for iOS 13+, Android 10+, and BrowserStack testing.",
-          "Developed an end-to-end invoice generation system, ensuring compliance by securely storing invoices for 10 years in AWS S3.",
-          "Optimized images by generating multiple image resolutions using AWS Lambda running on Python, resulting in faster page load. MVP/POC: In 3 months, Production release: 5 months. GMV after 12 months: 12 Million Yen/month."
+          "Integrated Docomo Pay APIs into gateway, contributing to 5.2% of platform revenue. Interpreted Japanese Docomo API documentation."
         ]
       },
       {
-        title: "Docomo (d払い) Pay Integration: TakeMe Pay",
-        technologies: ["TypeScript/React", "Java/SpringBoot"],
+        title: "Restaurant Booking System: TakeMe Concierge",
+        technologies: ["AWS", "Angular 16", "Tailwind", "SpringBoot", "Thyme leaf"],
         achievements: [
-          "Integrated and maintained Docomo Pay APIs, contributing 5.2% of platform revenue.",
-          "Reviewed and interpreted Japanese documentation for API integration."
+          "Build the frontend for a B2C booking system from scratch with cross-browser compatibility for IOS11+ and Android 8+. MVP/POC: In 3months, Production release: 5months. GMV after 12months: 12Million Yen / month",
+          "Developed an invoice generation system using thymeleaf, springboot, storing and private retrieval from S3 via API servers and not CDN.",
+          "Improved Core Web Vitals (LCP) by implementing AWS Lambda (Go) for multi-resolution image generation and skeleton loading."
         ]
       }
     ]
@@ -79,52 +77,27 @@ export const experience = [
   {
     company: "Delhivery Ltd.",
     location: "India",
-    duration: "Jan 2020 - Aug 2022",
+    duration: "Jun 2020 - Aug 2022",
     role: "Senior Software Engineer",
     linkedinUrl: "https://in.linkedin.com/company/delhivery",
     websiteUrl: "https://www.delhivery.com/",
     logo: process.env.PUBLIC_URL + "/assets/images/companies/delhivery-logo.png",
-    roles: [
-      {
-        title: "Senior Software Engineer",
-        duration: "Apr 2022 - Aug 2022"
-      },
-      {
-        title: "Software Engineer",
-        duration: "Jun 2020 - Mar 2022"
-      },
-      {
-        title: "Intern (SDE)",
-        duration: "Jan 2020 - Mar 2020"
-      }
-    ],
     projects: [
       {
-        title: "Last Mile Delivery Service: RETURNS Microservice",
-        technologies: ["Python/Django 2.2", "Pytest", "Angular 4", "Postgres", "AWS"],
+        title: "Last Mile Delivery: RETURNS Microservice",
+        technologies: ["Django", "Postgres", "AWS", "Kafka", "GO", "DynamoStreams"],
         achievements: [
-          "As a lead Engineer, managed a team of 2 engineers, prepared UML diagrams and AWS architecture diagrams, delivered knowledge transfer sessions, and coordinated with product managers for feature enhancements.",
-          "Scaled a warehouse dispatch microservice to handle 4x higher data loads using event-driven architecture.",
-          "Improved API performance by 70% using optimized SQL queries.",
-          "Developed an OTP-verified delivery system supporting electronic proof of delivery documents.",
-          "Load Testing API on JMeter supporting 5x load and unit testing done via Pytest."
+          "Scaled service to handle 4x data load by Improving warehouse dispatch and package scan APIs performance by 70% using optimized SQL queries, parallel processing and reducing redundant meta data in Database by 30%.",
+          "Served as SinglePointOfContact for RETURNS, created UML and AWS architecture diagrams.Implemented POC in GO, to demonstrate materially higher throughput, faster lambda cold starts, using Go 1.x over Django on AWS Lambda for scan-processing workloads.",
+          "Developed an OTP-verified delivery system supporting electronic proof of delivery documents for audit."
         ]
       },
       {
         title: "Virtual Number Calling System: CALL MASKING",
-        technologies: ["Python/Django", "Pytest", "Redis", "AWS"],
+        technologies: ["GO", "Redis", "AWS"],
         achievements: [
-          "Implemented a fault-tolerant system for secure, private calls using virtual numbers, ensuring data privacy and compliance.",
-          "Designed a PIN-based number management system that dynamically allocates virtual numbers, reducing call failures.",
-          "Increased fault tolerance using a fallback mechanism to handle calling errors by switching to another third-party carrier, leveraging Redis caching and pipelines, resulting in an 85% improvement in connection rate."
-        ]
-      },
-      {
-        title: "Platform Team",
-        technologies: ["Python", "Node.js", "AWS"],
-        achievements: [
-          "Learned about AWS resources, serverless architecture and event-driven architecture.",
-          "Implemented basic payment status check web pages for Payments Microservice team using Node.js and Python."
+          "Developed secure, private calls using virtual numbers.",
+          "Implemented fallback logic using Redis pipelines, boosting call connection rate by 85%."
         ]
       }
     ]
@@ -139,19 +112,16 @@ export const education = {
 
 export const certifications = [
   {
-    category: "LinkedIn Certifications",
-    description: [
-      "2 Java Certifications",
-      "2 Database Certifications",
-      "1 Python Certification"
-    ]
-  },
-  {
-    category: "Competitive Programming (C++)",
+    category: "Publications",
     platform: "GeeksforGeeks",
-    description: "4 Articles & 2 Improvements/Collaborations",
+    description: "4 Articles, 2 Collaborations: C++ Competitive Programming",
     profileLink: "https://auth.geeksforgeeks.org/user/cr7_bullet/articles?utm_source=geeksforgeeks&utm_medium=article_author&utm_campaign=auth_user#",
     profileName: "cr7-bullet"
+  },
+  {
+    category: "Certifications",
+    description: "5 Certifications (SQL, JAVA, Python)",
+    link: "link"
   }
 ];
 
