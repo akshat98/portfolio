@@ -41,8 +41,9 @@ export const experience = [
         achievements: [
           "Built RAG agent for QAs that converts Test specs documents into automated test payloads using Rakuten LLM + Google ADK",
           "Designed and implemented auto-cancel batch functionality from scratch for Rakuten Card's Barcode and QR payment methods.",
-          "Upgraded cipher suite from AES/CBC to AES/GCM and rotated AES keys per NIST guidelines and PCI DSS compliance.",
-          "Improved CI/CD Pipeline, by upgrading OWASP Dependency check to 12.x.x and by resolving critical vulnerabilities from Dependency Check and PMD, and worked with security team for the codebase vulnerability mitigation guidelines"
+          "Upgraded the cipher suite from AES/CBC to AES/GCM for encryption in transit, implemented AES key rotation in accordance with NIST and PCI DSS guidelines, and maintained backward compatibility during the phased deprecation of CBC.",
+          "Improved the CI/CD pipeline by upgrading OWASP Dependency-Check to v12.x and resolving critical vulnerabilities identified by Dependency-Check and PMD, while collaborating with the security team to implement codebase vulnerability mitigation guidelines.",
+          "Implemented canary deployments with blue-green traffic switching via NLB and AWS Global Accelerator for a ~300 QPS payment system, replacing direct traffic cutovers and eliminating release-time latency spikes."
         ]
       }
     ]
