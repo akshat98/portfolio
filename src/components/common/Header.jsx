@@ -1,12 +1,12 @@
 import React from 'react';
 import Navigation from './Navigation';
-import { personalInfo } from '../../data/portfolioData';
+import { personalInfo, resumeDownloads } from '../../data/portfolioData';
 
 const Header = () => {
-  const handleDownloadJP = () => {
+  const handleDownload = (file) => {
     const link = document.createElement('a');
-    link.href = process.env.PUBLIC_URL + '/Akshat_resume_jp.docx';
-    link.download = 'Akshat_resume_jp.docx';
+    link.href = process.env.PUBLIC_URL + `/${file}`;
+    link.download = file;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -17,13 +17,18 @@ const Header = () => {
       <nav className="p-8 space-y-8">
         <h1 className="text-3xl font-bold">👨‍💻 {personalInfo.name}</h1>
         <Navigation />
-        
-        <button
-          onClick={handleDownloadJP}
-          className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-semibold"
-        >
-          職務経歴書をダウンロード / Download JP
-        </button>
+
+        <div className="space-y-3">
+          {resumeDownloads.map((item) => (
+            <button
+              key={item.file}
+              onClick={() => handleDownload(item.file)}
+              className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors text-sm font-semibold"
+            >
+              {item.label}
+            </button>
+          ))}
+        </div>
       </nav>
     </header>
   );

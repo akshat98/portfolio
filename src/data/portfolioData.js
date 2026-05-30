@@ -138,6 +138,22 @@ export const contact = {
   github: "https://github.com/akshat98"
 };
 
+
+export const resumeDownloads = [
+  {
+    label: "English Resume",
+    file: "ResumeAkshatJoshi.pdf"
+  },
+  {
+    label: "職務経歴書 / Career History",
+    file: "Akshat_resume_jp.pdf"
+  },
+  {
+    label: "履歴書 / Rirekisho",
+    file: "Akshat_rirekisho.pdf"
+  }
+];
+
 export const navigation = [
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
